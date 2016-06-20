@@ -1,0 +1,21 @@
+%h1=@project.name
+
+= link_to 'wijzig', edit_project_path(@project)
+= link_to 'User-Stories',project_stories_path(@project)
+%br
+%br
+
+%h2 Project informatie
+%h4
+  %strong Wat bouw je?
+= @project.what
+%h4
+  %strong Voor wie bouw je het?
+= @project.for_who
+%h4
+  %strong Wat zijn de features van de app?
+= @project.features
+
+%h4 Gebruikers
+= render @project.users
+= render 'users/form'

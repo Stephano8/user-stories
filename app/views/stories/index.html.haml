@@ -1,0 +1,16 @@
+%h1 User stories voor: #{@project.name}
+
+= link_to 'Nieuwe story +', new_project_story_path(@project), class: 'btn'
+
+.story_wrapper.cf
+  - @stories.each do |story|
+    .user_story
+      As a
+      - story.users.each do |user|
+        #{user.name}
+      i want to #{story.goal} so that #{story.benefit}
+      %br
+      %br
+      = link_to 'edit', edit_project_story_path(@project, story)
+      = link_to 'delete', project_story_path(@project, story),
+                method: :delete, data: {notice: "Weet je het zeker?"}

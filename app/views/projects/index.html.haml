@@ -1,0 +1,10 @@
+.projects_wrapper
+  %h1 Projecten
+  = link_to 'Nieuw +', new_project_path, class: "btn"
+  %ul#projects_list
+    - @projects.each do |project|
+      %a.item
+        %li
+          %h3= link_to project.name.to_s , project
+          .links
+            = link_to 'Verwijder', project, method: :delete, data: {confirm: "Weet zeker dat je dit project wilt verwijderen?"}

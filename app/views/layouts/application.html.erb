@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UserStoriesApp</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header class="header cf">
+<div class="logo">
+  <h1>User.Stories</h1>
+</div>
+<nav>
+  <%= link_to 'Home', root_path %>
+  <%= link_to 'Activiteiten', "" %>
+  <%= link_to 'Planning', "" %>
+  <%= link_to 'Uitloggen', "" %>
+<nav>
+
+</header>
+
+<div class="container">
+
+  <%= yield %>
+
+</div>
+
+</body>
+</html>

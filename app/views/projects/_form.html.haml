@@ -1,0 +1,22 @@
+= form_for @project do |f|
+  = f.label :name, 'Naam van (potentiële) App'
+  %br
+  = f.text_field :name
+  %br
+  %br
+  = f.label :what, 'Wat maak je?'
+  %br
+  = f.text_area :what
+  %br
+  %br
+  = f.label :for_who, 'Voor wie maak je het?'
+  %br
+  = f.text_area :for_who
+  %br
+  %br
+  -# Hieronder is gewoon om te laten zien dat ik met nested forms kan werken
+  -#   = f.fields_for :users do |user|
+  -#     = user.label :name, 'Gebruiker'
+  -#     = user.text_field :name
+
+  = f.submit

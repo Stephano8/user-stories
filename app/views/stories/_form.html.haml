@@ -1,0 +1,19 @@
+= form_for ([@project, @story]) do |f|
+  %p As a:
+  - @project.users.each do |user|
+    %div
+      = check_box_tag "story[user_ids][]", user.id, @story.user_ids.include?(user.id), id: dom_id(user)
+      = label_tag dom_id(user), user.name
+  %br
+  %div
+  = f.label :goal, "i want to..."
+  %div
+  = f.text_area :goal
+  %br
+  %div
+  = f.label :benefit, "so that..."
+  %div
+  = f.text_area :benefit
+  %br
+  %br
+  = f.submit

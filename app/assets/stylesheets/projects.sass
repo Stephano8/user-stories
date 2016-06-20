@@ -1,0 +1,94 @@
+// Place all the styles related to the projects controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$blue: #4A90E2
+
+.cf:before,
+.cf:after
+  content: " "
+  display: table
+
+.cf:after
+  clear: both
+
+body
+  font-family: 'Roboto', sans-serif
+
+h1
+  font-weight: 300
+  color: #4A4A4A
+
+.btn
+  color: $blue
+  padding: 30px
+  text-decoration: none
+  text-transform: uppercase
+
+
+header
+  height: 60px
+  background: #50E3C2
+  .logo
+    font-family: 'Pacifico', cursive
+    color: black
+    float: left
+    font-size: .6em
+    margin-left: 4em
+  nav
+    float: right
+    padding-top: 20px
+    margin-right: 3em
+    a
+      font-size: .9em
+      margin-left: 20px
+      text-decoration: none
+      color: black
+      &:hover
+        color: white
+
+
+.container
+  width: 970px
+  margin-left: auto
+  margin-right: auto
+
+.projects_wrapper
+  width: 700px
+  margin: 70px auto 20px auto
+  h1
+    display: inline-block
+  .btn
+    margin: 0 0 0 auto
+
+  ul
+    list-style: none
+    width: 100%
+    position: relative
+    padding: 0
+    .item
+      text-decoration: none
+    li
+      background: white
+      border: 1px solid #50E3C2
+      padding: 20px 40px
+      border-radius: .3em
+      margin-bottom: 10px
+      width: 100%
+      display: table
+      h3
+        display: table-cell
+        a
+          text-decoration: none
+          color: black
+          &:hover
+            color: #50E3C2
+      .links
+        display: table-cell
+        text-align: right
+        a
+          text-decoration: none
+          color: black
+          margin-left: 20px
+          &:hover
+            color:  #50E3C2
